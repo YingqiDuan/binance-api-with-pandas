@@ -1,2 +1,2 @@
-get USDT continuous klines\n
+get USDT continuous klines  
 trading system not provided
