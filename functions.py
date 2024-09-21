@@ -1,6 +1,7 @@
 from binance.um_futures import UMFutures
 import pandas as pd
 import numpy as np
+import time
 
 
 def get(coin, interval, days):
@@ -8,6 +9,7 @@ def get(coin, interval, days):
     get_coin = um_futures_client.continuous_klines(
         coin, "PERPETUAL", interval, limit=days
     )
+    time.sleep(0.03)
     return pd.DataFrame(get_coin)
 
 
