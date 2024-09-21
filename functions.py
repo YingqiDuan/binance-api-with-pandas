@@ -9,7 +9,7 @@ def get(coin, interval, days):
     get_coin = um_futures_client.continuous_klines(
         coin, "PERPETUAL", interval, limit=days
     )
-    time.sleep(0.03)
+    time.sleep(0.1)
     return pd.DataFrame(get_coin)
 
 
